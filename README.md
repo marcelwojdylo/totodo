@@ -1,7 +1,7 @@
 # totodo
 
 ## Description
-A simple mobile-oriented to-do app which allows the user to add, remove, edit and view to-do tasks which are stored in a mongodb database.
+A simple mobile-first responsive to-do app which allows the user to add, remove, edit and view to-do tasks which are stored in a mongodb database.
 
 ## Technology stack
 - MongoDB
@@ -10,7 +10,7 @@ A simple mobile-oriented to-do app which allows the user to add, remove, edit an
 - Node.js
 
 ## To run this app on your own machine
-Enter the directory of the cloned repository on your file in Terminal, then run `sh setup.sh`
+Enter the directory of the cloned repository in Terminal, then run `sh setup.sh`
 
 ## Client-side
 
