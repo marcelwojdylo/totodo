@@ -12,6 +12,40 @@ A simple mobile-oriented to-do app which allows the user to add, remove, edit an
 ## To run this app on your own machine
 Enter the directory of the cloned repository on your file in Terminal, then run `sh setup.sh`
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Example User stories
 - **Create todo** As a user I want to create a new todo/task with `title` and `body` and save it in the database.
 - **List todos** As a user I want to see all my todos in a list.
