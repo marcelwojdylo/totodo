@@ -1,17 +1,16 @@
-#totodo
+# totodo
 
-##Description
+## Description
 A simple mobile-oriented to-do app which allows the user to add, remove, edit and view to-do tasks which are stored in a mongodb database.
 
-##Technology stack
+## Technology stack
 - MongoDB
 - Express
 - ReactJS
 - Node.js
 
-##To run this app on your own machine
+## To run this app on your own machine
 
----
 ### Example User stories
 - **Create todo** As a user I want to create a new todo/task with `title` and `body` and save it in the database.
 - **List todos** As a user I want to see all my todos in a list.
