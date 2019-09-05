@@ -76,7 +76,7 @@ Uses axios to make all requests to the server-side application using GET, POST, 
 - **200** Operation successful
 
 ### Models
-A single model is used in the server-side application, which uses the following schema:
+A single model named `Todo` is used in the server-side application, which uses the following schema:
 ```javascript
 {
   title: {
@@ -99,4 +99,5 @@ A single model is used in the server-side application, which uses the following 
 ## Links
 
 [Github repository link](http://github.com)
+
 [Deployed App Link](http://heroku.com)

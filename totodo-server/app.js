@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 4000;
-const publicDomain = process.env.PUBLIC_DOMAIN || 'http://localhost:3000';
+// const publicDomain = process.env.PUBLIC_DOMAIN || 'http://localhost:3000';
 const localDomain = 'http://192.168.0.111:3000/'
 require('dotenv').config();
 
@@ -24,7 +24,7 @@ const todoRoute = require('./routes/todos');
 app.use(bodyParser.json());
 app.use(cors({
   credentials: true,
-  origin: [publicDomain]
+  origin: process.env.PUBLIC_DOMAIN
 }));
 
 app.use('/api', todoRoute);
