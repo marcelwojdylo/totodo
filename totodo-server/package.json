@@ -1,7 +1,7 @@
 {
   "name": "totodo-server",
   "version": "1.0.0",
-  "description": "Todo REST API",
+  "description": "REST API for totodo",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

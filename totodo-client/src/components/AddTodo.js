@@ -45,7 +45,7 @@ export class AddTodo extends Component {
             <article className="addTodoFormBox">
                 <form className="addTodoForm">
                     <label className="inputLabel" htmlFor="title">Title:</label>
-                    <input required className="inputField" name="title" type="text" value={title} onChange={this.handleChange} maxLength="32"></input>
+                    <input required className="inputField" name="title" type="text" value={title} onChange={this.handleChange}></input>
                     <label className="inputLabel" htmlFor="body">Notes:</label>
                     <textarea rows="4" className="inputField" name="body" type="text" value={body} onChange={this.handleChange}></textarea>
                 </form>

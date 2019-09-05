@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import 'milligram';
 
 import ToDoList from './components/ToDoList.js';
 import AddTodo from './components/AddTodo.js'
