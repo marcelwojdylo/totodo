@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:100&display=swap');
+
+body {
+  color: black;
+  font-family: 'Arima Madurai', cursive;
+  background: rgb(59,0,124);
+  background: #24c6dc;
+  background: linear-gradient(180deg, #24c6dc, #514a9d);
+}
+
+/* APP */
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0 auto 2em auto;
+  width: 24em;
+}
+
+/* HEADER */
+
+.siteHeader {
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Pacifico';
+  margin: 0.5em 0 0 0;
+}
+
+/* LIST OF TO-DOS */
+
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* max-width: 24em; */
+}
+
+/* SINGLE TO-DO CARD */
+
+.toDoCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 0.4em 0 0.4em 0;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: white;
+  max-width: 24em;
+  overflow-wrap: break-word;
+}
+
+
+.toDoCardContent {
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 0.5em; */
+}
+
+.toDoCardTitle {
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* overflow-wrap: normal; */
+  /* margin: 0.8em 1em 0 1em;
+  margin-top: 0.8em; */
+  padding: 10px 20px 10px 20px;
+  margin: 0 0 0 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.toDoCardBody {
+  font-size: 1em;
+  font-weight: 400;
+  text-align: justify;
+  padding: 0px 20px 10px 20px;
+  margin: 0;
+}
+
+.toDoCardButtonsContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* padding: 0 0 0.4em 0 */
+}
+
+.toDoCardButton {
+  width: 1.7em;
+  margin-right: 0.8em;
+  margin-bottom: 1em;
+}
+
+/* INPUT FIELDS AND LABELS */
+
+.inputField {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1em;
+  border: 1px solid rgb(238, 74, 75);
+  border-radius: 5px;
+  resize: none;
+  padding: 0.5em;
+}
+
+.inputLabel {
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0.4em 0 0.1em 0;
+}
+
+/* ADD TO-DO COMPONENT */
+
+.addTodoContainer {
+  position: absolute;
+  top: 0px; 
+  left: -11.9em;
+  display: flex;
+  height: fit-content;
+  width: 11.5em;
+  /* margin-right: 0.4em; */
+  max-width: 11.5em;
+  justify-content: flex-end;
+}
+ 
+.addTodoFormBox {
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.4em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.addTodoFormButton {
+  width: 1.7em;
+  margin-right: 0.3em;
+  margin-bottom: 0.5em;
+  margin: 0 0.3em 0.5em 0.5em;
+}
+
+.addTodoForm {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+
+.addTodoButton {
+  margin: 0.4em;
+  height: 2em;
+}
+
+
+/* EDIT TO-DO COMPONENT */
+
+.editTodoFormBox {
+  background-color: white;
+  width: -webkit-fill-available;
+  border-radius: 5px;
+  margin: 0.4em auto 0.4em auto;
+}
+
+.editTodoForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: inherit;
+  margin: 0 0 20px 0;
+  padding: 0.5em;
+}
+
+.editTodoForm label {
+  font-weight: 300;
+  text-align: left;
+}
+
+/* NARROW SCREEN OVERRIDES */
+
+@media (max-width: 780px) {
+
+
+  .App {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    max-width: 24em;
+  }
+
+  .siteHeader {
+    margin: 0.5em 0 0 0;
+  }
+
+  .toDoList {
+    width: 100%;
+    align-items: center;
+  }
+
+  .toDoCard {
+      width: inherit;
+  }
+
+  .addTodoContainer {
+    position:static;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin: -1em 0 0.5em 0;
+    width: 100%;
+    max-width: -webkit-fill-available;
+  }
+
+  .addTodoFormBox {
+    background-color: white;
+    width: 100%;
+    margin: auto;
+  }
+
+  .addTodoForm {
+  }
+
+  .addTodoButton {
+    margin: 0 0 0.2em 0
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  form {
+    width: 90vw;
+  }
+
+}
