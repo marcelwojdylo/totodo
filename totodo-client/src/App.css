@@ -8,6 +8,7 @@ body {
   background: rgb(59,0,124);
   background: #24c6dc;
   background: linear-gradient(180deg, #24c6dc, #514a9d);
+  min-height: 100vh;
 }
 
 /* APP */
@@ -50,6 +51,7 @@ body {
   margin: 0.4em 0 0.4em 0;
   justify-content: flex-end;
   width: 100%;
+  min-width: 24em;
   background-color: white;
   max-width: 24em;
   overflow-wrap: break-word;
@@ -201,6 +203,7 @@ body {
 
   .toDoCard {
       width: inherit;
+      min-width: 0;
   }
 
   .addTodoContainer {

@@ -24,8 +24,11 @@ const todoRoute = require('./routes/todos');
 app.use(bodyParser.json());
 app.use(cors({
   credentials: true,
-  origin: [publicDomain]
+  origin: '*'
 }));
+
+// origin: [publicDomain]
+// app.use(cors())
 
 app.use('/api', todoRoute);
 
