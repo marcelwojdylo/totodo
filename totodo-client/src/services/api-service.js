@@ -2,7 +2,7 @@ import axios from 'axios';
 require('dotenv').config();
 
 let serverURL;
-if (process.env.NODE_ENV === 'development') {
+if (!process.env.NODE_ENV) {
     serverURL = `http://localhost:4000/api`
 } else {
     serverURL = `https://totodo-server.herokuapp.com/api`
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'development') {
 class ApiService {
     constructor() {
         this.api = axios.create({
-            baseURL: serverURL, 
+            baseURL: `http://localhost:4000/api`, 
             // withCredentials: true,
         })
     }

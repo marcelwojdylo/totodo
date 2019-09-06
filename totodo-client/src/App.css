@@ -120,12 +120,11 @@ body {
 .addTodoContainer {
   position: absolute;
   top: 0px; 
-  left: -11.9em;
-  display: flex;
+  left: -17.2em;  display: flex;
   height: fit-content;
-  width: 11.5em;
+  width: 17em;
   /* margin-right: 0.4em; */
-  max-width: 11.5em;
+  /* max-width: 11.5em; */
   justify-content: flex-end;
 }
  
@@ -182,7 +181,7 @@ body {
 
 /* NARROW SCREEN OVERRIDES */
 
-@media (max-width: 780px) {
+@media (max-width: 924px) {
 
 
   .App {

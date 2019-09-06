@@ -24,14 +24,14 @@ const app = express();
   
 
 let allowedOrigin;
-if (process.env.NODE_ENV === "production") {
-  allowedOrigin = `https://totodo-client.herokuapp.com`
-} else {
+if (!process.env.NODE_ENV) {
   allowedOrigin = `http://localhost:3000`
+} else {
+  allowedOrigin = `https://totodo-client.herokuapp.com`
 }
 
 app.use(cors({
-  origin: allowedOrigin
+  origin: `http://localhost:3000`
 }))
 
 app.use(bodyParser.json());
