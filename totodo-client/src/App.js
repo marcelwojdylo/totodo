@@ -5,7 +5,6 @@ import ToDoList from './components/ToDoList.js';
 import AddTodo from './components/AddTodo.js'
 
 class App extends Component {
-
   refresh = () => {
     this.forceUpdate()
   }

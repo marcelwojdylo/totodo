@@ -13,7 +13,6 @@ export class ToDoList extends Component {
     getTodos = () => {
         apiService.getAllTodos()
         .then(response => {
-          // console.log('apiService.getUserPhotos:', response)
             this.setState({
                 todos: response.data.reverse()
             })
@@ -37,8 +36,16 @@ export class ToDoList extends Component {
         })
     }
 
-    render() {
+    componentDidMount = () => {
         this.getTodos();
+    }
+
+    componentDidUpdate = () => {
+        // this.getTodos();
+    }
+
+
+    render() {
         const {todos, editingTodo} = this.state;
         return (
             <>
