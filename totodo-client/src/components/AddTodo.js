@@ -34,9 +34,9 @@ export class AddTodo extends Component {
             body
         })
         .then(response => {
+            this.props.refresh();
         })
         .catch(error => console.log(error))
-        this.props.refresh();
     }
 
     form = () => {

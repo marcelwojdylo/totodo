@@ -6,22 +6,16 @@ import removeTodoIcon from '../icons/remove-todo-icon.png';
 
 export class ToDoList extends Component {
     state = {
-        todos: [],
         editingTodo: ""
     }
 
-    getTodos = () => {
-        apiService.getAllTodos()
-        .then(response => {
-            this.setState({
-                todos: response.data.reverse()
-            })
-          })
-    }
+
 
     handleDelete = (id) => {
         apiService.removeTodo(id)
-        this.props.refresh()
+        .then(() => {
+            this.props.refresh()
+        })
     }
 
     handleEdit = (id) => {
@@ -34,10 +28,11 @@ export class ToDoList extends Component {
         this.setState({
             editingTodo: ""
         })
+        this.props.refresh()
     }
 
     componentDidMount = () => {
-        this.getTodos();
+        // this.getTodos();
     }
 
     componentDidUpdate = () => {
@@ -46,7 +41,8 @@ export class ToDoList extends Component {
 
 
     render() {
-        const {todos, editingTodo} = this.state;
+        const {todos} = this.props;
+        const {editingTodo} = this.state;
         return (
             <>
                 <div className="toDoList">
