@@ -4,35 +4,29 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 4000;
-// const publicDomain = process.env.PUBLIC_DOMAIN || 'http://localhost:3000';
-const localDomain = 'http://192.168.0.111:3000/'
 require('dotenv').config();
 
 const todoRoute = require('./routes/todos');
 
 
 mongoose.Promise = global.Promise;
-console.log(process.env.MONGODB_URI)
 mongoose
-.connect(process.env.MONGODB_URI)
+.connect(`mongodb+srv://marcel:marcel1234%21@totodo-uqdss.mongodb.net/test?retryWrites=true&w=majority`)
 .then(
   console.log('Database is connected')
   )
   .catch(error => console.log(error));
   
 const app = express();
-  
 
-let allowedOrigin;
-if (!process.env.NODE_ENV) {
-  allowedOrigin = `http://localhost:3000`
-} else {
-  allowedOrigin = `https://totodo-client.herokuapp.com`
-}
+// `http://localhost:3000`
+// `https://totodo-client.herokuapp.com`
 
-app.use(cors({
-  origin: `http://localhost:3000`
-}))
+app.use(cors())
+
+// app.use(cors({
+//   origin: `https://totodo-client.herokuapp.com`
+// }))
 
 app.use(bodyParser.json());
   
