@@ -5,11 +5,10 @@ import editTodoIcon from '../icons/edit-todo-icon.png';
 import removeTodoIcon from '../icons/remove-todo-icon.png';
 
 export class ToDoList extends Component {
+    
     state = {
         editingTodo: ""
     }
-
-
 
     handleDelete = (id) => {
         apiService.removeTodo(id)
@@ -30,15 +29,6 @@ export class ToDoList extends Component {
         })
         this.props.refresh()
     }
-
-    componentDidMount = () => {
-        // this.getTodos();
-    }
-
-    componentDidUpdate = () => {
-        // this.getTodos();
-    }
-
 
     render() {
         const {todos} = this.props;
@@ -82,7 +72,7 @@ export class ToDoList extends Component {
                             } else {
                                return ""
                             }
-                       }) : <p>Loading...</p>
+                       }) : <p className="loadingMessage">Loading...</p>
                     }
                 </div>
             </>

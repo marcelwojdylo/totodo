@@ -17,7 +17,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   margin: 0 auto 2em auto;
   width: 24em;
@@ -38,8 +37,11 @@ body {
 .toDoList {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* max-width: 24em; */
+}
+
+.loadingMessage {
+  color: white;
+  font-weight: bold;
 }
 
 /* SINGLE TO-DO CARD */
@@ -57,19 +59,14 @@ body {
   overflow-wrap: break-word;
 }
 
-
 .toDoCardContent {
   display: flex;
   flex-direction: column;
-  /* padding-right: 0.5em; */
 }
 
 .toDoCardTitle {
   font-size: 1.5em;
   font-family: 'Source Sans Pro', sans-serif;
-  /* overflow-wrap: normal; */
-  /* margin: 0.8em 1em 0 1em;
-  margin-top: 0.8em; */
   padding: 10px 20px 10px 20px;
   margin: 0 0 0 0;
   font-weight: 500;
@@ -88,7 +85,6 @@ body {
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
-  /* padding: 0 0 0.4em 0 */
 }
 
 .toDoCardButton {
@@ -124,8 +120,6 @@ body {
   left: -17.2em;  display: flex;
   height: fit-content;
   width: 17em;
-  /* margin-right: 0.4em; */
-  /* max-width: 11.5em; */
   justify-content: flex-end;
 }
  
@@ -151,7 +145,7 @@ body {
   margin: 0 0 20px 0;
 }
 
-.addTodoButton {
+.toggleAddTodoButton {
   margin: 0.4em;
   height: 2em;
 }
@@ -173,11 +167,6 @@ body {
   width: inherit;
   margin: 0 0 20px 0;
   padding: 0.5em;
-}
-
-.editTodoForm label {
-  font-weight: 300;
-  text-align: left;
 }
 
 /* NARROW SCREEN OVERRIDES */
@@ -202,8 +191,8 @@ body {
   }
 
   .toDoCard {
-      width: inherit;
-      min-width: 0;
+    width: inherit;
+    min-width: 0;
   }
 
   .addTodoContainer {
@@ -222,19 +211,7 @@ body {
     margin: auto;
   }
 
-  .addTodoForm {
-  }
-
   .addTodoButton {
     margin: 0 0 0.2em 0
   }
-
-  h3 {
-    font-size: 10px;
-  }
-
-  form {
-    width: 90vw;
-  }
-
 }

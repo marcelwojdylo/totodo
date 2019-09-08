@@ -3,6 +3,7 @@ import apiService from '../services/api-service.js';
 import doneIcon from '../icons/done-icon.png';
 
 export class EditTodo extends Component {
+
     state = {
         title: this.props.title,
         body: this.props.body,
@@ -23,10 +24,10 @@ export class EditTodo extends Component {
             id
         })
         .then(response => {
+            this.props.closeEditForm();
+            this.props.refresh();
         })
         .catch(error => console.log(error))
-        this.props.closeEditForm();
-        this.props.refresh();
     }
 
     render() {

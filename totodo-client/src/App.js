@@ -15,10 +15,6 @@ class App extends Component {
     this.getTodos();
   }
 
-  refresh = () => {
-    this.getTodos()
-  }
-
   getTodos = () => {
     apiService.getAllTodos()
     .then(response => {
@@ -35,8 +31,8 @@ class App extends Component {
           totodo
         </header>
         <div className="App">
-          <AddTodo refresh={this.refresh}/>
-          <ToDoList refresh={this.refresh} todos={this.state.todos}/>
+          <AddTodo refresh={this.getTodos}/>
+          <ToDoList refresh={this.getTodos} todos={this.state.todos}/>
         </div>
       </>
     );

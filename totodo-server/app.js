@@ -24,10 +24,6 @@ const app = express();
 
 app.use(cors())
 
-// app.use(cors({
-//   origin: `https://totodo-client.herokuapp.com`
-// }))
-
 app.use(bodyParser.json());
   
 app.use('/api', todoRoute);

@@ -64,7 +64,7 @@ export class AddTodo extends Component {
                 {
                     formVisible
                     ? this.form()
-                    : <img src={addTodoIcon} alt="Add a todo" className="addTodoButton" onClick={this.toggleAddTodoForm}/>
+                    : <img src={addTodoIcon} alt="Add a todo" className="toggleAddTodoButton" onClick={this.toggleAddTodoForm}/>
                 }
             </div>
         )
