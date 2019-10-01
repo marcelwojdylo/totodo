@@ -1,7 +1,9 @@
 # totodo
-
+![Screenshot](screenshots/totodos.png)
 ## Description
 A simple, single-page mobile-first responsive to-do app which allows the user to add, remove, edit and view to-do tasks which are stored in a database.
+
+Visit [this link](https://totodo-client.herokuapp.com/) to see the deployed app.
 
 ## Technology stack
 - MongoDB
